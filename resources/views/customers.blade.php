@@ -8,5 +8,5 @@
 <h1>Customer Accounts</h1>
 
 @foreach ($customers as $customer)
-    <p>{{ $customer['name'] }} — {{ $customer['email'] }} — {{ $customer['phone'] }}</p>
+    <p>{{ $customer->full_name }} — {{ $customer->email }} — {{ $customer->phone }}</p>
 @endforeach

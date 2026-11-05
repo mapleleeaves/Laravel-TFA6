@@ -8,5 +8,5 @@
 <h1>User Accounts</h1>
 
 @foreach ($users as $user)
-    <p>{{ $user['name'] }} - {{ $user['email'] }} - {{ $user['role'] }}</p>
+    <p>{{ $user->username }} - {{ $user->full_name }}</p>
 @endforeach

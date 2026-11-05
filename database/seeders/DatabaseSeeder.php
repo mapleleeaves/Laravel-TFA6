@@ -2,24 +2,67 @@
 
 namespace Database\Seeders;
 
+use App\Models\Customer;
 use App\Models\User;
-use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 
 class DatabaseSeeder extends Seeder
 {
-    use WithoutModelEvents;
-
-    /**
-     * Seed the application's database.
-     */
     public function run(): void
     {
-        // User::factory(10)->create();
+        Customer::create([
+            'full_name' => 'Patrick Archie',
+            'email' => 'patrick@gmail.com',
+            'phone' => '09123456789',
+        ]);
 
-        User::factory()->create([
-            'name' => 'Test User',
-            'email' => 'test@example.com',
+        Customer::create([
+            'full_name' => 'Silayan Calabia',
+            'email' => 'silayan@gmail.com',
+            'phone' => '09234567890',
+        ]);
+
+        Customer::create([
+            'full_name' => 'Patrick Calabia',
+            'email' => 'pcalabia@gmail.com',
+            'phone' => '09345678901',
+        ]);
+
+        Customer::create([
+            'full_name' => 'Archie Silayan',
+            'email' => 'archie@gmail.com',
+            'phone' => '09456789012',
+        ]);
+
+        Customer::create([
+            'full_name' => 'Ocean Santos',
+            'email' => 'ocean@gmail.com',
+            'phone' => '09567890123',
+        ]);
+
+        User::create([
+            'username' => 'glitter',
+            'full_name' => 'Glitter ',
+        ]);
+
+        User::create([
+            'username' => 'sparkle',
+            'full_name' => 'Sparkle ',
+        ]);
+
+        User::create([
+            'username' => 'bob',
+            'full_name' => 'Bob ',
+        ]);
+
+        User::create([
+            'username' => 'frank',
+            'full_name' => 'Frank ',
+        ]);
+
+        User::create([
+            'username' => 'ocean',
+            'full_name' => 'Ocean ',
         ]);
     }
 }
